@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background: rgb(20, 150, 50);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 250, 238);
+    min-height: 40vh;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    font-size: 0.9;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    position: absolute;
+    color: rgb(20, 150, 50);
+}
+
+.header-title::before {
+    content: '';
+    position: absolute;
+    background: rgb(20, 150, 50);
+    height: 6px;
+    width: 32px;
+    left: 0;
+    bottom: 0;
+    top: 80%;
+    border-radius: 6px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.textbox {
+    height: 2.5em;
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.textbox:focus {
+    background: black;
+    color: white;
+}
+
+.submit {
+    font-size: 18px;
+    color: rgb(20, 150, 50);
+    background: white;
+    border: 4px solid rgb(20, 150, 50);
+    border-radius: 3px;
+    width: 200px;
+    height: 2.5em;
+}
+
+.submit:hover {
+    color: white;
+    background: rgb(20, 150, 50);
+    transition: 0.4s;
+    width: 300px;
+    height: 3em;
+}
