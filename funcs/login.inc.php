@@ -1,10 +1,10 @@
 <?php
-    include('conexao.php');
+    include_once 'lib/conexao.inc.php';
 
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
-    $query = "SELECT id, email FROM users WHERE email = '{$email}' AND password = '{$password}';";
+    $query = "SELECT id, email FROM users WHERE email = $email AND password = $password;";
     
     $result = mysqli_query($con, $query);
 
@@ -12,8 +12,8 @@
 
     if($row == 1) {
         $_SESSION['email'] = $email;
-        header('Location: PasswordGenerator');
+        $opção = 'PasswordGenerator';
     } else {
-        header('Location: index.php');
+        $opção = 'menuLogin';
     }
 ?>
